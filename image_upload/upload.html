@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>图片上传</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		body{
+			width: 80%;
+			margin: 0 auto;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<iframe  name="post_frame" style="display:none;"> </iframe>
+	<form id="image_upload" action="upload.php" target="post_frame" method="POST" enctype="multipart/form-data">
+		<input type="file" name="file">
+		<input type="submit" value="上传" name="submit">
+		<input type="hidden" name="callbackUrl" value="http://php.com/image_upload/callback.php"/>
+	</form>
+	<p>图片显示</p>
+	url:<input type="text" name="image_url" style="width: 80%;margin-bottom: 20px;"><br/>
+	<img id="image_show" style="width: 100%;height: 300px;">
+</body>
+</html>

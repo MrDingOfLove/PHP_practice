@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+    "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Upload Image</title>
+    <meta charset="utf-8">
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+</head>
+<body>
+     <!--注意这里的iframe标签-->
+     <iframe  name="post_frame" style="display:none;"> </iframe>
+
+      <form id="photo_upload" action="pic.php" method="post" target="post_frame"  enctype="multipart/form-data">              
+        <table width="100%" cellspacing="0" cellpadding="0" border="0" >
+          <tbody>
+            <tr>  
+              <th style="border-bottom:1px solid #D1E0EB;text-align: right;">主题封面图：</th>
+              <td style="border-bottom:1px solid #D1E0EB">
+                <input type="file" id="file" name="opus" value="" width="200" /> <input style=" height: 40px;width: 45px;" type="submit" value="上传" name="submit" />&nbsp;&nbsp;<span> 图片格式 jpg  jpeg gif  png  </span>
+                <input type="hidden" name="callbackUrl" value="http://localhost/url_test/callback.php"  />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+
+        <table width="100%" cellspacing="0" cellpadding="0" border="0" >
+
+           <tr>
+              <th style="border-bottom:1px solid #D1E0EB;text-align: right;">封面图URL：</th>
+              <td style="border-bottom:1px solid #D1E0EB">
+                <input type="text" id="cover_img_url" name="cover_img_url" size="120" readonly="readonly" /><span>* 
+                <span style=" height: 100px;" id="show_img"></span></span>
+              </td>
+            </tr>
+      </table>
+ </body>
+</html>

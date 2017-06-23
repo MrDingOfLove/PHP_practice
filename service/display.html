@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<table border=1 style="margin: 100px auto;">
+		<tr>
+			<td>序号</td>
+			<td>姓名</td>
+			<td>年龄</td>
+		</tr>
+		<?php foreach ($usr as $key => $value):?>
+			<tr>
+				<td><?php echo $value['id'];?></td>
+				<td><?php echo $value['name'];?></td>
+				<td><?php echo $value['age'];?></td>
+			</tr>
+			<p><?php echo $value['intruduce']; ?></p>
+		<?php endforeach?>
+	</table>
+</body>
+</html>

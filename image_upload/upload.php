@@ -1,6 +1,5 @@
 <?php  
-	// header("Content-type:text/html;charset=utf-8");
-	/// 配置文件需要上传到服务器的路径，需要允许所有用户有可写权限，否则无法上传成功
+	// 配置文件需要上传到服务器的路径，需要允许所有用户有可写权限，否则无法上传成功
 	$uploadPath = '../uploads_images/';
 	$imag_show_Path = 'uploads_images/';
 	// 获取提交的图片数据

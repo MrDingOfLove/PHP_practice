@@ -23,5 +23,4 @@
 		}
 		return $result;
 	}
-	$insert_
 ?>

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,13 +20,16 @@
 	</style>
 </head>
 <body>
+	<?php include_once 'article_load.php' ?>
 	<p>标题</p>
-	<input type="text"id="title" placeholder="文章标题">
+	<input type="text"id="title" placeholder="文章标题" value="<?php echo $article['title']; ?>">
 	<p>时间</p>
-	<input type="text"id="time" placeholder="文章发布时间">
+	<input type="text"id="time" placeholder="文章发布时间" value="<?php echo $article['time']; ?>">
 	<p>内容</p>
 	<div id="article">
-		<textarea placeholder="输入文章第一段"></textarea>
+		<?php foreach ($article_ps as $article_p):?>
+			<textarea placeholder="输入文章第一段"><?php echo $article_p;?></textarea>
+		<?php endforeach ?>
 	</div>
 	<input type="button" value="增加段落" onclick="add()">
 	<input type="button" value="删除最后一段" onclick="delete_p()">
